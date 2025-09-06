@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rute Destinasi Wisata</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="controls">
+            <header>
+                <h1>Rute Wisata</h1>
+                <p>Temukan rute tercepat ke destinasi wisata Anda.</p>
+            </header>
+            <div class="form">
+                <div class="input-group">
+                    <label for="origin">Lokasi Awal</label>
+                    <input type="text" id="origin" placeholder="Masukkan lokasi Anda">
+                </div>
+                <div class="input-group">
+                    <label for="destination">Destinasi</label>
+                    <input type="text" id="destination" placeholder="Masukkan tujuan wisata">
+                </div>
+                <div class="input-group">
+                    <label>Mode Transportasi</label>
+                    <div class="radio-group">
+                        <input type="radio" id="driving" name="mode" value="DRIVING" checked>
+                        <label for="driving">Mobil</label>
+                        <input type="radio" id="transit" name="mode" value="TRANSIT">
+                        <label for="transit">Transportasi Umum</label>
+                        <input type="radio" id="walking" name="mode" value="WALKING">
+                        <label for="walking">Jalan Kaki</label>
+                        <input type="radio" id="bicycling" name="mode" value="BICYCLING">
+                        <label for="bicycling">Sepeda</label>
+                    </div>
+                </div>
+                <button id="find-route">Cari Rute</button>
+            </div>
+            <div id="results">
+                <!-- Hasil rute akan ditampilkan di sini -->
+            </div>
+        </div>
+        <div id="map"></div>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- 
+        Ganti YOUR_API_KEY dengan kunci Google Maps API Anda.
+        Anda perlu mengaktifkan Maps JavaScript API, Places API, dan Directions API.
+    -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap"></script>
+</body>
+</html>
